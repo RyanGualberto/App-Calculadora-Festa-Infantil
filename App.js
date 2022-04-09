@@ -11,7 +11,7 @@ export default function App() {
       {/* <TextInput placeholder="quantidade" style={styles.entradaqtd} value={Convidados} onChangeText={(value) => setConvidados(value)}></TextInput> */}
       <View style={styles.section}>
         <TouchableOpacity style={styles.botao}>
-          Calcular
+          Calcularrr
         </TouchableOpacity>
       </View>
       {/* <Componente Convidados={Convidados}></Componente> */}
