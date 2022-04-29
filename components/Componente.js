@@ -1,30 +1,34 @@
 import React, { useState } from 'react';
 import { Text, View } from 'react-native-web';
 
-export default function Calcular(props) {
-    let value = [];
-    function calc() {
+export default function Componente(props) {
+    let texto = [];
 
 
-          
-            var qtrefri = Convidados * 600;
-        var qtagua = Convidados * 200;
-        var qtbolo = Convidados * 100;
-        var qtdoces = Convidados * 3;
-        var qtsalg = Convidados * 10;
-      
-        <Text> Planejamento Festa</Text>;
-        <Text> Refrigerante: {qtrefri}ml</Text>;
-        <Text> Agua: {qtagua}ml</Text>;
-        <Text> Bolo: {qtbolo} gramas</Text>;
-        <Text> Doces: {qtdoces} Unidades</Text>;
-        <Text> Salgadinhos: {qtsalg} unidades</Text>;
-
-
-    }
+    let qtrefri = props.qtConvidados * 600;
+    let qtagua = props.qtConvidados * 200;
+    let qtbolo = props.qtConvidados * 100;
+    let qtdoces = props.qtConvidados * 3;
+    let qtsalg = props.qtConvidados * 10;
+    texto.push(
+        <Text> 
+            quantidade de pessoas {props.qtConvidados}
+            <br></br>
+            Refrigerante: {qtrefri}ml
+            <br></br>
+            Agua: {qtagua}ml
+            <br></br>
+            Bolo: {qtbolo} gramas
+            <br></br>
+            Doces: {qtdoces} Unidades;
+            <br></br>
+            Salgadinhos: {qtsalg} unidades
+            <br></br>
+            </Text>
+    );
 
     return (
 
-       <View>  {calc} </View>
+        <View>  {texto} </View>
     );
 }

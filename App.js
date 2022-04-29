@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { TextInput, TouchableOpacity } from 'react-native-web';
-import { useState } from 'react/cjs/react.production.min';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import Componente from './components/Componente';
 
 export default function App() {
-  // const [Convidados, setConvidados] = useState(0);
+  const [Convidados, setConvidados] = useState(0);
+  function mostrarTexto() {
+   
+  }
   return (
     <View style={styles.container}>
-      {/* <TextInput placeholder="quantidade" style={styles.entradaqtd} value={Convidados} onChangeText={(value) => setConvidados(value)}></TextInput> */}
-      <View style={styles.section}>
-        <TouchableOpacity style={styles.botao}>
-          Calcularrr
+      <View> Digite a quantidade de Convidados</View>
+      <TextInput placeholder="quantidade" style={styles.entradaqtd} value={Convidados} onChangeText={(value) => setConvidados(value)}></TextInput>
+      
+
+      <TouchableOpacity style={styles.botao} onPress={mostrarTexto()}>
+          <View>Calcular</View>
         </TouchableOpacity>
-      </View>
-      {/* <Componente Convidados={Convidados}></Componente> */}
+        <Componente qtConvidados={Convidados} />
     </View>
   );
 }
@@ -22,11 +24,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1c1c',
     alignItems: 'center',
     justifyContent: 'center',
   },
   entradaqtd: {
     backgroundColor: 'red',
   },
+  botao: {
+    backgroundColor: 'red',
+  }
 });
