@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native';
 import Componente from './components/Componente';
 
 export default function App() {
@@ -10,6 +10,7 @@ export default function App() {
   return (
     <View style={styles.container}>
     <View style={styles.h1}> Party Calc</View>
+
       <View style={styles.h2}> Digite a quantidade de Convidados</View>
       <TextInput placeholder="quantidade" style={styles.input} value={Convidados} onChangeText={(value) => setConvidados(value)}></TextInput>
       
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
     marginTop: '20px',
     width: '280px',
     height: '35px',
+    boxShadow: '1px 1px 1px 1px'
   },
   botao: {
     backgroundColor: '#83d6fc',
@@ -61,7 +63,8 @@ const styles = StyleSheet.create({
     border: '2px solid  #fdd6d0',
     borderRadius: '5px',
     fontSize: '22px',
-    marginTop: '20px'
+    marginTop: '20px',
+    boxShadow: '1px 1px 1px 1px #83d6fc'
   },
 
   txtbotao: {

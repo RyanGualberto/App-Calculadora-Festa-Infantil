@@ -13,17 +13,17 @@ export default function Componente(props) {
     texto.push(
         <View style={styles.container}>
         <Text style={styles.Answer}> 
-            quantidade de pessoas <View style={styles.valores}>{props.qtConvidados}</View>
+            Quantidade de pessoas <View style={styles.valores}>{props.qtConvidados}</View>
             <br></br>
-            Refrigerante: <View style={styles.valores}>{qtrefri}</View>L
+            Refrigerante: <View style={styles.valores}>{qtrefri}</View> L
             <br></br>
-            Agua: <View style={styles.valores}>{qtagua}</View>L
+            Agua: <View style={styles.valores}>{qtagua}</View> L
             <br></br>
             Bolo: <View style={styles.valores}>{qtbolo}</View> Kg
             <br></br>
-            Doces: <View style={styles.valores}>{qtdoces}</View> Unidades;
+            Doces: <View style={styles.valores}>{qtdoces}</View> Un
             <br></br>
-            Salgadinhos: <View style={styles.valores}>{qtsalg}</View> unidades
+            Salgadinhos: <View style={styles.valores}>{qtsalg}</View> Un
             <br></br>
             </Text>
             </View>
@@ -37,7 +37,8 @@ export default function Componente(props) {
 
 const styles = StyleSheet.create({ 
     Answer: {
-        
+        borderRadius: '5px',
+        border: '2px solid  #ffda7e',
         marginTop: '15px',
         width: '300px',
         height: '250px',
@@ -47,6 +48,8 @@ const styles = StyleSheet.create({
         fontSize: '22px',
         textAlign: 'justify',
         fontWeight: 'bold', 
+        paddingLeft: '10px',
+        boxShadow: '1px 1px 10px  #09EE0C'
  
     },
     valores: {
